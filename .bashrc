@@ -137,8 +137,8 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 ## Git ##
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias pat="cat $PAT"
+alias dots="./.scripts/dots.sh"
+alias pat="cat $PAT ; echo"
 
 ## Portage ##
 #alias emi="time $SUPERUSER emerge -v"                                   # Emerge
