@@ -464,6 +464,7 @@ myKeys c =
   , ("M1-g r",          addName "Launch RuneLite"       $ spawn "./.local/bin/appimages/RuneLite.AppImage")
 
   {- Coding -}
+  , ("M1-n",            addName "Launch Neovim"         $ spawn (myTerminal ++ " -e nvim"))
   , ("M1-c v",          addName "Launch VSCode"         $ spawn "vscode")
   , ("M1-c s",          addName "Launch Spyder"         $ spawn "spyder")
 
