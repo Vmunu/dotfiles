@@ -423,11 +423,11 @@ myKeys c =
   , ("M-,",	addName "Move to prev WS"               $ moveTo Prev nonNSP)]
 
   ^++^ subKeys "Window navigation"
-  [ ("M-j",		addName "Move focus to next window"                $ windows W.focusDown)
-  , ("M-k",		addName "Move focus to prev window"                $ windows W.focusUp)
+  [ ("M-j",		addName "Move focus to prev window"                $ windows W.focusUp)
+  , ("M-k",		addName "Move focus to next window"                $ windows W.focusDown)
   , ("M-m",		addName "Move focus to master window"              $ windows W.focusMaster)
-  , ("M-S-j",		addName "Swap focused window with next window"   $ windows W.swapDown)
-  , ("M-S-k",		addName "Swap focused window with prev window"   $ windows W.swapUp)
+  , ("M-S-j",		addName "Swap focused window with prev window"   $ windows W.swapUp)
+  , ("M-S-k",		addName "Swap focused window with next window"   $ windows W.swapDown)
   , ("M-S-m",		addName "Swap focused window with master window" $ windows W.swapMaster)
   , ("M-<Return>",	addName "Move focused window to master"  $ promote)]
 
