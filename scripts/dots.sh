@@ -27,6 +27,7 @@ a)
   ;;
 
 b)
+  # Config files
   rm -rf ~/.dotfiles/config/*
   cp -r ~/.config/xmonad ~/.dotfiles/config/
   cp -r ~/.config/bspwm ~/.dotfiles/config/
@@ -41,14 +42,21 @@ b)
   cp -r ~/.config/zathura ~/.dotfiles/config/
   cp -r ~/.config/nvim ~/.dotfiles/config/
 
+  # Scripts
   rm -rf ~/.dotfiles/scripts/*
   cp -r ~/.scripts/* ~/.dotfiles/scripts/
 
+  # System files
   rm -rf ~/.dotfiles/sys/*
   cp -r ~/.sys/* ~/.dotfiles/sys/
 
+  # Extra files
   cp -r ~/LICENSE ~/.dotfiles/LICENSE
   cp -r ~/.bashrc ~/.dotfiles/bashrc
+
+  # Templates
+  rm -rf ~/.dotfiles/templates/*
+  cp -r ~/Templates/* ~/.dotfiles/templates/
   exec sh "$0" "$@"
   ;;
 

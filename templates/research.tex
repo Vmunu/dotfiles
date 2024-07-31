@@ -1,0 +1,132 @@
+\documentclass[11pt]{report} % 10pt, 11pt or 12pt
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+\title{\textsc{Research Paper}} % Paper title
+\author{Name\\ % Name
+  Course Title\\ % Course
+  \textit{Institution}\\ % Institution
+  %\includegraphics[scale=1.0]{} % Cover photo
+}
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{times}
+\usepackage{amsmath, amsthm, amssymb, amsfonts, mathtools}
+\usepackage{bbold, mathbbol, bbm, dsfont}
+\usepackage{mathrsfs}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{tcolorbox}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage[symbol]{footmisc}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{musicography}
+\usepackage{multicol}
+\usepackage{cancel}
+\usepackage{braket}
+
+
+% Dark mode
+%\pagecolor{darkgray}
+%\color{white}
+
+\renewcommand{\thesection}{\Roman{section}}
+\makeatletter
+\renewcommand\@biblabel[1]{} % No numbers for the references
+\renewenvironment{thebibliography}[1]{
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin20pt% change 20 pt according to your needs
+            \advance\leftmargin\labelsep
+            \setlength\itemindent{-20pt}% change using the inverse of the length used before
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\renewcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Research Topic},
+    }
+
+% Define Shortcuts
+\def\bd#1{\textbf{#1}}
+\def\it#1{\textit{#1}}
+\def\E#1{\times10^{#1}}
+\def\exp#1{e^{#1}}
+\newcommand{\infint}{\int_{\infty}^{\infty}}
+
+%----------------------------------------------------------------------------------------
+%   FOOTNOTE CITATIONS
+%       List footnote citations as comments
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagenumbering{roman}
+\maketitle
+
+\begin{spacing}{1.5}
+\tableofcontents % Table of Contents
+\end{spacing}
+
+\begin{spacing}{2.0} % Doublespaced
+\pagenumbering{arabic}
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+\section{Introduction}
+
+
+%------------------------------------------------
+\section{First Section}
+
+%------------------------------------------------
+\section{Second Section}
+
+%------------------------------------------------
+\section{Third Section}
+
+%------------------------------------------------
+\section{Conclusion}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%	    Use \bibitem{LastName} to list bibliography entries.
+%----------------------------------------------------------------------------------------
+\end{spacing}
+\newpage
+\section{References}
+\begin{thebibliography}{widest-label}
+
+\end{thebibliography}
+%----------------------------------------------------------------------------------------
+\end{document}

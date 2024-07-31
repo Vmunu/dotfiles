@@ -1,9 +1,10 @@
 #+title: Vox's Dotfiles
 #+author: Vox
+
 # __        __
 # \ \      / /
 #  \ \    / /
-#   \ \  / /              UmbralGoat[Vox]
+#   \ \  / /            Vox
 #    \ \/ / _   _ __ _  https://www.github.com/v_munu
 #     \  / | |_| |\ V/  https://umbralgoat.net
 #      \/  |  _,/  \/   Discord: v_munu
