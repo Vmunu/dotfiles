@@ -47,8 +47,8 @@ b)
   rm -rf ~/.dotfiles/sys/*
   cp -r ~/.sys/* ~/.dotfiles/sys/
 
-  cp -r ~/LICENSE ~/.dotfiles/
-  cp -r ~/.bashrc ~/.dotfiles/
+  cp -r ~/LICENSE ~/.dotfiles/LICENSE
+  cp -r ~/.bashrc ~/.dotfiles/bashrc
   exec sh "$0" "$@"
   ;;
 
