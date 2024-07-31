@@ -90,7 +90,7 @@ import XMonad.Util.SpawnOnce
 -- SolarizedLight
 -- TomorrowNight
 
-import Colors.Nord
+import Colors.DoomOne
 
 myFont :: String
 myFont = "xft:Mononoki:regular:size=12:antialias=true:hinting=true"
