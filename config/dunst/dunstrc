@@ -1,5 +1,5 @@
 [global]
-    font = "anonymous pro 12"
+    font = "mononoki 12"
     allow_markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes
@@ -19,7 +19,6 @@
     separator_height = 2
     padding = 8
     horizontal_padding = 8
-    separator_color = "#2aa198"
     startup_notification = false
     # https://github.com/knopwob/dunst/issues/26#issuecomment-36159395
     #icon_position = left
@@ -27,38 +26,25 @@
     dmenu = /usr/bin/dmenu -p dunst:
     browser = /usr/bin/librewolf -new-tab
 
-[frame]
-    width = 0
-    color = "98971A"
-
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
     history = ctrl+grave
     context = ctrl+shift+period
 
-[urgency_low]
-;    background = "#1D2021"
-;    foreground = "#B16286"
+[global]
+frame_color = "#8aadf4"
+separator_color= frame
 
-background = "#BD93F9"
-foreground = "#282A36"
-    timeout = 4
+[urgency_low]
+background = "#24273a"
+foreground = "#cad3f5"
 
 [urgency_normal]
-;    background = "#1D2021"
-;    foreground = "#B16286"
-
-background = "#BD93F9"
-foreground = "#282A36"
-
-timeout = 2
+background = "#24273a"
+foreground = "#cad3f5"
 
 [urgency_critical]
-;    background = "#1D2021"
-;    foreground = "#B16286"
-
-background = "#BD93F9"
-foreground = "#282A36"
-    timeout = 4
-x
+background = "#24273a"
+foreground = "#cad3f5"
+frame_color = "#f5a97f"
