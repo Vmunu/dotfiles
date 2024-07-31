@@ -44,6 +44,9 @@ b)
   rm -rf ~/.dotfiles/scripts/*
   cp -r ~/.scripts/* ~/.dotfiles/scripts/
 
+  rm -rf ~/.dotfiles/sys/*
+  cp -r ~/.sys/* ~/.dotfiles/sys/
+
   cp -r ~/LICENSE ~/.dotfiles/
   cp -r ~/.bashrc ~/.dotfiles/
   exec sh "$0" "$@"

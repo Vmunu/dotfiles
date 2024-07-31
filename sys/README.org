@@ -1,0 +1,12 @@
+#+TITLE: .sys/
+#+AUTHOR: Vox
+# __        __
+# \ \      / /
+#  \ \    / /
+#   \ \  / /            UmbralGoat[Vox]
+#    \ \/ / _   _ __ _  https://www.github.com/v_munu
+#     \  / | |_| |\ V/  https://umbralgoat.net
+#      \/  |  _,/  \/   Discord: v_munu
+#          |_|
+
+This directory is for any system files that aid in setting up a Linux distribution. This includes Portage config files for Gentoo and graphics config files to fix screen-tearing on Nvidia and/or AMD.

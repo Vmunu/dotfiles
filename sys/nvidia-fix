@@ -1,0 +1,21 @@
+#         ____
+#  _   _ / ___|  UmbralGoat [Vox]
+# | | | | |  _   https://www.github.com/VoxT1
+# | |_| | |_| |  https://www.twitter.com/umbralgoat
+#  \__,_|\____|  ψι#6283
+#
+# Add this to /etc/X11/xorg.conf
+# This will fix screen-tearing and make moving windows move smoother
+
+Section "Screen"
+    Identifier     "Screen0"
+    Device         "Device0"
+    Monitor        "Monitor0"
+    Option         "metamodes" "nvidia-auto-select +0+0 {ForceFullCompositionPipeline=On}"
+    Option         "AllowIndirectGLXProtocol" "off"
+    Option         "TripleBuffer" "on"
+    DefaultDepth    24
+    SubSection     "Display"
+        Depth       24
+    EndSubSection
+EndSection

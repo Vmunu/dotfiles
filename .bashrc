@@ -1,13 +1,14 @@
-#         ____
-#  _   _ / ___|  UmbralGoat [Vox]
-# | | | | |  _   https://www.github.com/VoxT1
-# | |_| | |_| |  https://www.twitter.com/umbralgoat
-#  \__,_|\____|  ψι#6283
-#
+# __        __
+# \ \      / /
+#  \ \    / /
+#   \ \  / /            UmbralGoat[Vox]
+#    \ \/ / _   _ __ _  https://www.github.com/v_munu
+#     \  / | |_| |\ V/  https://umbralgoat.net
+#      \/  |  _,/  \/   Discord: v_munu
+#          |_|
 # My .bashrc configuration, feel free to harvest some aliases.
 
 ### Run startx on TTY login ###
-
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   startx
 fi
@@ -55,7 +56,7 @@ neofetch
 #eza -lh --color=always --group-directories-first
 
 ## Prompt ##
-export PS1='\[\e[0;32m\u@\h {\e[0m \w \e[0;32m} $\e[0m\] '
+export PS1='\[\e[0;32m\u@\h [\e[0m \w \e[0;32m] $\e[0m\] '
 
 ## Exports ##
 export VISUAL=nvim
@@ -76,8 +77,8 @@ export PATH="$HOME/.cabal/bin":$PATH
 export PATH="$HOME/.local/bin":$PATH
 
 ### Administration ###
-#export SUPERUSER=doas
 export SUPERUSER=sudo
+#export SUPERUSER=doas
 
 ### Aliases ###
 ## Superuser ##
@@ -100,7 +101,6 @@ alias ptex="pdflatex"
 alias iso="tree /media/hdd/ISOs/"
 
 alias jup="cd $HOME/Jupyter && jupyter lab"
-
 alias ballad="cd /home/vox/Writing/LaTeX/Ballad\ for\ the\ Dragon\ Outlining/"
 
 ## List ##
