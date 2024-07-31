@@ -1,11 +1,13 @@
 #+TITLE: Vox's Scripts
 #+AUTHOR: Vox
-#         ____
-#  _   _ / ___|  UmbralGoat [Vox]
-# | | | | |  _   https://www.github.com/VoxT1
-# | |_| | |_| |  https://www.twitter.com/umbralgoat
-#  \__,_|\____|  ψι#6283
-#
+# __        __
+# \ \      / /
+#  \ \    / /
+#   \ \  / /            UmbralGoat[Vox]
+#    \ \/ / _   _ __ _  https://www.github.com/v_munu
+#     \  / | |_| |\ V/  https://umbralgoat.net
+#      \/  |  _,/  \/   Discord: v_munu
+#          |_|
 
 My knowledge of scripting is pretty limited, and so far I've only done things in Bash, but this is my little place to store any silly things I decide to write!
 

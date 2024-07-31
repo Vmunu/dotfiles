@@ -1,11 +1,15 @@
 #!/bin/bash
-# __     _______
-# \ \   / /_   _|  Vox Tetra
-#  \ \ / /  | |    https://www.github.com/VoxT1
-#   \ V /   | |    https://www.twitter.com/VoxTetra1
-#    \_/    |_|    vt#9827
-#
-# Mounts the necessary file systems so you don't need to copy/paste or write out every single command
+# __        __
+# \ \      / /
+#  \ \    / /
+#   \ \  / /              UmbralGoat[Vox]
+#    \ \/ / _   _ __ _  https://www.github.com/v_munu
+#     \  / | |_| |\ V/  https://umbralgoat.net
+#      \/  |  _,/  \/   Discord: v_munu
+#          |_|
+# Mounts the necessary file systems so
+# you don't need to copy/paste or write
+# out every single command.
 
 echo "Mounting necessary filesystems..."
 
