@@ -38,11 +38,14 @@ b)
   cp -r ~/.config/polybar ~/.dotfiles/config/
   cp -r ~/.config/doom ~/.dotfiles/config/
   cp -r ~/.config/dunst ~/.dotfiles/config/
+  cp -r ~/.config/zathura ~/.dotfiles/config/
   cp -r ~/.config/nvim ~/.dotfiles/config/
+
+  rm -rf ~/.dotfiles/scripts/*
+  cp -r ~/.scripts/* ~/.dotfiles/scripts/
 
   cp -r ~/LICENSE ~/.dotfiles/
   cp -r ~/.bashrc ~/.dotfiles/
-  cp -r ~/.scripts ~/.dotfiles/scripts
   exec sh "$0" "$@"
   ;;
 
