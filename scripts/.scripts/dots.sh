@@ -38,6 +38,7 @@ b)
   cp -r ~/.config/polybar ~/.dotfiles/config/
   cp -r ~/.config/doom ~/.dotfiles/config/
   cp -r ~/.config/dunst ~/.dotfiles/config/
+  cp -r ~/.config/zathura ~/.dotfiles/config/
   cp -r ~/.config/nvim ~/.dotfiles/config/
 
   cp -r ~/LICENSE ~/.dotfiles/
