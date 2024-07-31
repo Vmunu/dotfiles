@@ -9,7 +9,7 @@
 ### Run startx on TTY login ###
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-startx
+  startx
 fi
 
 ### Ignore capitalization for autocomplete ###
@@ -17,32 +17,32 @@ bind "set completion-ignore-case on"
 
 ### List dir every cd & clear ###
 function cd {
-    builtin cd "$@"
-    RET=$?
-    clear && eza -lh --color=always --group-directories-first
-    return $RET
+  builtin cd "$@"
+  RET=$?
+  clear && eza -lh --color=always --group-directories-first
+  return $RET
 }
 alias clear='clear && eza -lh --color=always --group-directories-first'
 
 ### Archive Extraction ###
-ex (){
-  if [ -f "$1" ] ; then
+ex() {
+  if [ -f "$1" ]; then
     case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1   ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *.deb)       ar x $1      ;;
-      *.tar.xz)    tar xf $1    ;;
-      *.tar.zst)   unzstd $1    ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
+    *.tar.bz2) tar xjf $1 ;;
+    *.tar.gz) tar xzf $1 ;;
+    *.bz2) bunzip2 $1 ;;
+    *.rar) unrar x $1 ;;
+    *.gz) gunzip $1 ;;
+    *.tar) tar xf $1 ;;
+    *.tbz2) tar xjf $1 ;;
+    *.tgz) tar xzf $1 ;;
+    *.zip) unzip $1 ;;
+    *.Z) uncompress $1 ;;
+    *.7z) 7z x $1 ;;
+    *.deb) ar x $1 ;;
+    *.tar.xz) tar xf $1 ;;
+    *.tar.zst) unzstd $1 ;;
+    *) echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
     echo "'$1' is not a valid file"
@@ -104,11 +104,11 @@ alias jup="cd $HOME/Jupyter && jupyter lab"
 alias ballad="cd /home/vox/Writing/LaTeX/Ballad\ for\ the\ Dragon\ Outlining/"
 
 ## List ##
-alias ls='eza -ahl --color=always --group-directories-first'  # All files and dirs
-alias la='eza -ahl --color=always --group-directories-first'  # All files and dirs
-alias ll='eza -lh --color=always --group-directories-first'   # Long format
-alias lt='eza -aT --color=always --group-directories-first'   # Tree listing
-alias l.='eza -a | egrep "^\."'                               # Lists dotfiles
+alias ls='eza -ahl --color=always --group-directories-first' # All files and dirs
+alias la='eza -ahl --color=always --group-directories-first' # All files and dirs
+alias ll='eza -lh --color=always --group-directories-first'  # Long format
+alias lt='eza -aT --color=always --group-directories-first'  # Tree listing
+alias l.='eza -a | egrep "^\."'                              # Lists dotfiles
 
 ## Youtube Downloading ##
 alias yta-aac="youtube-dl --extract-audio --audio-format aac"
@@ -197,6 +197,7 @@ alias pU="paru -Syuu"
 #alias xbqR="$SUPERUSER xbps-query -R"
 
 ## User Configs ##
+alias snips="$EDITOR ~/.config/nvim/UltiSnips/all.snippets"
 alias brc="$EDITOR ~/.bashrc"
 alias xrc="$EDITOR ~/.xinitrc"
 alias xmc="$EDITOR ~/.config/xmonad/xmonad.hs"

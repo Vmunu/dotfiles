@@ -44,8 +44,6 @@
 
 (setq +latex-viewers '(pdf-tools))
 
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"
-                                 "melpa-stable" . "https://stable.melpa.org/packages/"))
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
