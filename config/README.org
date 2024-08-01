@@ -1,4 +1,13 @@
-#+title: .config/
+#+title: ~/.config/
 #+author: Vox
+
+# __        __
+# \ \      / /
+#  \ \    / /
+#   \ \  / /            UmbralGoat[Vox]
+#    \ \/ / _   _ __ _  https://www.github.com/v_munu
+#     \  / | |_| |\ V/  https://umbralgoat.net
+#      \/  |  _,/  \/   Discord: v_munu
+#          |_|
 
 This is the main directory for configuration files.

@@ -1,5 +1,6 @@
-#+TITLE: .sys/
+#+TITLE: ~/.sys/
 #+AUTHOR: Vox
+
 # __        __
 # \ \      / /
 #  \ \    / /
