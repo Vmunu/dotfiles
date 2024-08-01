@@ -1,9 +1,12 @@
---          ____
---   _   _ / ___|  UmbralGoat [Vox]
---  | | | | |  _   https://www.github.com/VoxT1
---  | |_| | |_| |  https://www.twitter.com/umbralgoat
---   \__,_|\____|  dr4goat
-
+-- __        __
+-- \ \      / /
+--  \ \    / /
+--   \ \  / /            Vox
+--    \ \/ / _   _ __ _  https://www.github.com/v_munu
+--     \  / | |_| |\ V/  https://umbralgoat.net
+--      \/  |  _,/  \/   Discord: v_munu
+--          |_|
+--
 -- Note: For XMonad to compile for me, it seems that libffi must be downgraded to version 3.3-r2 on Gentoo Linux.
 
 {- Base -}
@@ -138,7 +141,7 @@ myStartupHook = do
 
   spawnOnce "xrandr --output DP-0 --mode 3440x1440 --rate 144 &"		-- Xrandr (One screen)
   spawn "/usr/bin/emacs --daemon &" 						-- emacs daemon for the emacsclient
-  spawn "/usr/libexec/polkit-gnome-authentication-agent-1 &"			-- Polkit Daemon
+  spawn "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &"			-- Polkit Daemon
   spawn "/usr/lib/xfce4/notifyd/xfce4-notifyd &"				-- Polkit Daemon
   spawnOnce "picom --experimental-backend &"					-- Compositor
   spawnOnce "nitrogen --restore &"						-- Wallpaper
@@ -349,16 +352,18 @@ myManageHook = composeAll
   , className =? "Yad"             --> doCenterFloat
   , className =? "RuneLite"             --> doCenterFloat
   , className =? "GParted"              --> doCenterFloat
-  , className =? "MultiMC"		--> doCenterFloat
-  , className =? "PrismLauncher"	--> doCenterFloat
-  , className =? "Gimp"            	--> doCenterFloat
-  , className =? "Pavucontrol"		--> doCenterFloat
-  , className =? "Org.gnome.Nautilus"	--> doCenterFloat
-  , className =? "Thunar"		--> doCenterFloat
-  , className =? "Leafpad"		--> doCenterFloat
+  , className =? "MultiMC"              --> doCenterFloat
+  , className =? "PrismLauncher"        --> doCenterFloat
+  , className =? "Gimp"                 --> doCenterFloat
+  , className =? "Pavucontrol"          --> doCenterFloat
+  , className =? "Org.gnome.Nautilus"   --> doCenterFloat
+  , className =? "Thunar"               --> doCenterFloat
+  , className =? "Leafpad"              --> doCenterFloat
   , className =? "Mousepad"             --> doCenterFloat
   , className =? "Galculator"           --> doCenterFloat
   , className =? "virt-manager"         --> doCenterFloat
+  , className =? "file-roller"          --> doCenterFloat
+  , className =? "vlc"                  --> doCenterFloat
   , className =? "Deadbeef"             --> doCenterFloat
   , className =? "Eog"                  --> doCenterFloat
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat

@@ -11,14 +11,15 @@ echo "░▒▓███████▓▒░ ░▒▓██████▓▒�
 echo "A simple script based on GitHub user thecaprisun's dotfile script."
 echo
 echo Welcome $USER.
-echo "a) Add, push and commit dotfiles"
-echo "b) Update current dotfiles"
-echo "c) Edit this script"
+echo "1) Add, push and commit dotfiles"
+echo "2) Update current dotfiles"
+echo "3) Edit this script"
+echo "q) Quit"
 
 read ANSWER
 case $ANSWER in
 
-a)
+1)
   cd ~/.dotfiles
   git add --all
   git commit
@@ -26,7 +27,7 @@ a)
   exec sh "$0" "$@"
   ;;
 
-b)
+2)
   # Config files
   rm -rf ~/.dotfiles/config/*
   cp -r ~/.config/xmonad ~/.dotfiles/config/
@@ -60,8 +61,9 @@ b)
   exec sh "$0" "$@"
   ;;
 
-c) nvim ~/.scripts/dots.sh && clear && exec sh "$0" "$@" ;;
+3) nvim ~/.scripts/dots.sh && clear && exec sh "$0" "$@" ;;
 
 q) clear && echo Goodbye! ;;
+
 *) echo Not one of the choices && sleep 2 && clear && exec sh "$0" "$@" ;;
 esac
