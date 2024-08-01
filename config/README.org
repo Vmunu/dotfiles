@@ -1,0 +1,4 @@
+#+title: .config/
+#+author: Vox
+
+This is the main directory for configuration files.

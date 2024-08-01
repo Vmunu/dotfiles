@@ -30,6 +30,7 @@ case $ANSWER in
 2)
   # Config files
   rm -rf ~/.dotfiles/config/*
+  cp ~/.config/README.org ~/.dotfiles/config/
   cp -r ~/.config/xmonad ~/.dotfiles/config/
   cp -r ~/.config/bspwm ~/.dotfiles/config/
   cp -r ~/.config/polybar ~/.dotfiles/config/
