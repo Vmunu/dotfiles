@@ -36,9 +36,8 @@ case $ANSWER in
   cp -r ~/.config/polybar ~/.dotfiles/config/
   cp -r ~/.config/alacritty ~/.dotfiles/config/
   cp -r ~/.config/flameshot ~/.dotfiles/config/
-  cp -r ~/.config/picom.conf ~/.dotfiles/config/
   cp -r ~/.config/rofi ~/.dotfiles/config/
-  cp -r ~/.config/polybar ~/.dotfiles/config/
+  cp -r ~/.config/picom ~/.dotfiles/config/
   cp -r ~/.config/doom ~/.dotfiles/config/
   cp -r ~/.config/dunst ~/.dotfiles/config/
   cp -r ~/.config/zathura ~/.dotfiles/config/

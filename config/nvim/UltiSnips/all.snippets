@@ -15,12 +15,6 @@ snippet subsec "Subsection"
 \subsection{$0}
 endsnippet
 
-snippet sign "Signature"
-Yours sincerely,
-
-Vox Winters
-endsnippet
-
 snippet box "Box"
 `!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
 │ $1 │
@@ -82,7 +76,7 @@ snippet td "superscript" iA
 endsnippet
 
 snippet // "Fraction" iA
-\\frac{$1}{$2}$0
+\\dfrac{$1}{$2}$0
 endsnippet
 
 snippet sympy "sympy block " w
@@ -109,12 +103,12 @@ snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
 endsnippet
 
 priority 10
-snippet "hat" "hat" riA
+snippet "hat" "hat" r
 \hat{$1}$0
 endsnippet
 
 priority 10
-snippet "dot" "dot" riA
+snippet "dot" "dot" r
 \dot{$1}$0
 endsnippet
 
