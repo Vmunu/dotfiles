@@ -57,7 +57,7 @@ case $ANSWER in
 
   # Templates
   rm -rf ~/.dotfiles/templates/*
-  cp -r ~/Templates/* ~/.dotfiles/templates/
+  cp -r ~/templates/* ~/.dotfiles/templates/
   exec sh "$0" "$@"
   ;;
 
