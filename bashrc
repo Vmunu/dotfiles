@@ -8,12 +8,12 @@
 #          |_|
 # My .bashrc configuration, feel free to harvest some aliases.
 
-### Run startx on TTY login ###
+### TTY AUTOLOGIN TO XORG ###
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   startx
 fi
 
-### Ignore capitalization for autocomplete ###
+### IGNORE CASE ###
 bind "set completion-ignore-case on"
 
 ### List dir every cd & clear ###
@@ -25,7 +25,7 @@ function cd {
 }
 alias clear='clear && eza -lh --color=always --group-directories-first'
 
-### Archive Extraction ###
+### ARCHIVE EXTRACTION ###
 ex() {
   if [ -f "$1" ]; then
     case $1 in
@@ -50,10 +50,10 @@ ex() {
   fi
 }
 
-### Startup ###
-neofetch
+### STARTUP ###
+#neofetch
 #pfetch
-#eza -lh --color=always --group-directories-first
+eza -lh --color=always --group-directories-first
 
 ## Prompt ##
 export PS1='\[\e[0;32m\u@\h [\e[0m \w \e[0;32m] $\e[0m\] '
@@ -64,7 +64,7 @@ export EDITOR=nvim
 export LFS=/mnt/scratch
 export LFS_TGT=x86_64-lfs-linux-gnu
 export JAVA_HOME=/opt/jdk-18.0.1.1/
-export PAT=~/Documents/Keys/PAT
+export PAT=~/documents/keys/PAT
 export QT_QPA_PLATFORMTHEME=qt5ct
 export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
 
@@ -75,12 +75,13 @@ export PATH="/usr/lib64/qt5/bin/":$PATH
 export PATH="$JAVA_HOME/bin":$PATH
 export PATH="$HOME/.cabal/bin":$PATH
 export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin":$PATH
 
-### Administration ###
+### ADMINISTRATION ###
 export SUPERUSER=sudo
 #export SUPERUSER=doas
 
-### Aliases ###
+### ALIASES ###
 ## Superuser ##
 alias root="$SUPERUSER su"
 
@@ -100,8 +101,12 @@ alias nfet="neofetch"
 alias ptex="pdflatex"
 alias iso="tree /media/hdd/ISOs/"
 
-alias jup="cd $HOME/Jupyter && jupyter lab"
-alias ballad="cd /home/vox/Writing/LaTeX/Ballad\ for\ the\ Dragon\ Outlining/"
+## Jupyter ##
+alias jup="cd $HOME/jupyter && jupyter lab"
+
+## Git ##
+alias dots="./.scripts/dots.sh"
+alias pat="cat $PAT ; echo"
 
 ## List ##
 alias ls='eza -ahl --color=always --group-directories-first' # All files and dirs
@@ -136,9 +141,16 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-## Git ##
-alias dots="./.scripts/dots.sh"
-alias pat="cat $PAT ; echo"
+## Pacman ##
+alias pmi="sudo pacman -S"
+alias pmr="sudo pacman -Rscn"
+alias pms="sudo pacman -Ss"
+alias pmS="sudo pacman -Syyy"
+alias pmU="sudo pacman -Syuu"
+alias pri="paru -S"
+alias prr="paru -Rscn"
+alias prs="paru -Ss"
+alias pU="paru -Syuu"
 
 ## Portage ##
 #alias emi="time $SUPERUSER emerge -v"                                   # Emerge
@@ -171,23 +183,6 @@ alias pat="cat $PAT ; echo"
 #alias mkc="$SUPERUSER $EDITOR /etc/portage/make.conf"
 #alias fst="$SUPERUSER $EDITOR /etc/fstab"
 
-## Pacman ##
-alias pmi="sudo pacman -S"
-alias pmr="sudo pacman -Rscn"
-alias pms="sudo pacman -Ss"
-alias pmS="sudo pacman -Syyy"
-alias pmU="sudo pacman -Syuu"
-alias pri="paru -S"
-alias prr="paru -Rscn"
-alias prs="paru -Ss"
-alias pU="paru -Syuu"
-
-## Apt ##
-#alias api="$SUPERUSER apt install"
-#alias apr="$SUPERUSER apt remove"
-#alias apar="$SUPERUSER apt autoremove"
-#alias apU="$SUPERUSER apt update && $SUPERUSER apt upgrade"
-
 ## XBPS ##
 #alias xbi="$SUPERUSER xbps-install -S"
 #alias xbU="$SUPERUSER xbps-install -Su"
@@ -196,12 +191,18 @@ alias pU="paru -Syuu"
 #alias xbq="$SUPERUSER xbps-query"
 #alias xbqR="$SUPERUSER xbps-query -R"
 
+## Apt ##
+#alias api="$SUPERUSER apt install"
+#alias apr="$SUPERUSER apt remove"
+#alias apar="$SUPERUSER apt autoremove"
+#alias apU="$SUPERUSER apt update && $SUPERUSER apt upgrade"
+
 ## User Configs ##
 alias snips="$EDITOR ~/.config/nvim/UltiSnips/all.snippets"
 alias brc="$EDITOR ~/.bashrc"
 alias xrc="$EDITOR ~/.xinitrc"
 alias xmc="$EDITOR ~/.config/xmonad/xmonad.hs"
-alias xbrc="$EDITOR ~/.config/xmobar/xmobarrc.hs"
+alias xbc="$EDITOR ~/.config/xmobar/xmobarrc.hs"
 #alias dwme="$SUPERUSER $EDITOR /etc/portage/savedconfig/x11-wm/dwm-6.2.h"
 #alias dwmb="$SUPERUSER emerge dwm"
 #alias hlc="$EDITOR ~/.config/herbstluftwm/autostart"
@@ -209,7 +210,7 @@ alias xbrc="$EDITOR ~/.config/xmobar/xmobarrc.hs"
 #alias sxc="$EDITOR ~/.config/sxhkd/sxhkdrc"
 #alias pbc="$EDITOR ~/.config/polybar/config"
 #alias pbl="$EDITOR ~/.config/polybar/launch.sh"
-alias alc="$EDITOR ~/.config/alacritty/alacritty.yml"
+alias alac="$EDITOR ~/.config/alacritty/alacritty.yml"
 
 ## Rick Roll ##
 alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
@@ -218,6 +219,3 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias log="kill -9 -1"
 alias reboot="$SUPERUSER reboot"
 alias poweroff="$SUPERUSER poweroff"
-
-### Starship Prompt ###
-#eval "$(starship init bash)"
