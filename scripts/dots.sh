@@ -34,7 +34,7 @@ case $ANSWER in
   cp -r ~/.config/xmonad ~/.dotfiles/config/
   cp -r ~/.config/bspwm ~/.dotfiles/config/
   cp -r ~/.config/polybar ~/.dotfiles/config/
-  cp -r ~/.config/alacritty ~/.dotfiles/config/
+  cp -r ~/.config/kitty ~/.dotfiles/config/
   cp -r ~/.config/flameshot ~/.dotfiles/config/
   cp -r ~/.config/rofi ~/.dotfiles/config/
   cp -r ~/.config/picom ~/.dotfiles/config/
