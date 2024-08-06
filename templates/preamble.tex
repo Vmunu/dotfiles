@@ -18,12 +18,6 @@
 \pdfsuppresswarningpagegroup=1
 \pdfminorversion=7
 
-% Title sections as 'Lecture'
-\usepackage{titlesec}
-  \titleformat{\section}[hang]
-    {\normalfont\Large\bfseries}
-    {Lecture \thesection}{20pt}{\Large}
-
 % Don't indent paragraphs, leave some space between them
 \usepackage{parskip}
 
@@ -36,8 +30,10 @@
 % Math packages
 \usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
 \usepackage{mathrsfs} % Fancy script
-\usepackage{cancel}
 \usepackage{bm} % Bold math
+\usepackage{cancel}
+\usepackage{mathrsfs} % Fancy script
+\usepackage{braket}
 
 % Some shortcuts
 \newcommand\N{\ensuremath{\mathbb{N}}}
@@ -252,5 +248,5 @@
     linkcolor=cyan,
     filecolor=magenta,
     urlcolor=cyan,
-    pdftitle={Document Title},
+    pdftitle={Research Topic},
     }
