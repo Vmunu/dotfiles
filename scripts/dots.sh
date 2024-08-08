@@ -28,8 +28,13 @@ case $ANSWER in
   ;;
 
 2)
-  # Config files
+  # Wipe directories clean
   rm -rf ~/.dotfiles/config/*
+  rm -rf ~/.dotfiles/scripts/*
+  rm -rf ~/.dotfiles/sys/*
+  rm -rf ~/.dotfiles/templates/*
+
+  # Config files
   cp ~/.config/user-dirs.dirs ~/.dotfiles/config/
   cp ~/.config/README.org ~/.dotfiles/config/
   cp -r ~/.config/xmonad ~/.dotfiles/config/
@@ -45,11 +50,9 @@ case $ANSWER in
   cp -r ~/.config/nvim ~/.dotfiles/config/
 
   # Scripts
-  rm -rf ~/.dotfiles/scripts/*
   cp -r ~/.scripts/* ~/.dotfiles/scripts/
 
   # System files
-  rm -rf ~/.dotfiles/sys/*
   cp -r ~/.sys/* ~/.dotfiles/sys/
 
   # Extra files
@@ -57,7 +60,6 @@ case $ANSWER in
   cp -r ~/.bashrc ~/.dotfiles/bashrc
 
   # Templates
-  rm -rf ~/.dotfiles/templates/*
   cp -r ~/templates/* ~/.dotfiles/templates/
   exec sh "$0" "$@"
   ;;
