@@ -105,7 +105,7 @@ myTerminal :: String
 myTerminal = "kitty"		-- Sets default terminal
 
 myBrowser :: String
-myBrowser = "firefox"			-- Sets default browser
+myBrowser = "chromium"			-- Sets default browser
 
 myMinecraft :: String
 myMinecraft = "prismlauncher"		-- Sets default Minecraft launcher
@@ -443,6 +443,7 @@ myKeys c =
   , ("M1-p",		addName "Launch Pavucontrol"	$ spawn "pavucontrol")
   , ("M-M1-h",		addName "Launch htop"		$ spawn (myTerminal ++ " -e htop"))
   , ("M-v",		addName "Launch Clipmenu"	$ spawn "CM_LAUNCHER=rofi clipmenu -p 'clipboard'")
+  , ("M-o",             addName "Launch Obsidian"       $ spawn "obsidian")
 
   , ("M-r l",           addName "Redshift Low"          $ spawn "redshift -PO 4000")
   , ("M-r m",           addName "Redshift Mid"          $ spawn "redshift -PO 3000")
