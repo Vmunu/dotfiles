@@ -455,7 +455,8 @@ myKeys c =
 
   {- Chat Programs -}
   , ("M1-c d",		addName "Launch Discord"	$ spawn "discord")
-  , ("M1-c f",		addName "Launch F-Chat"		$ spawn "$HOME/.local/bin/appimages/FChat.AppImage")
+  --, ("M1-c f",		addName "Launch F-Chat"		$ spawn "$HOME/.local/bin/appimages/FChat.AppImage")
+  , ("M1-c f",		addName "Launch F-Chat"		$ spawn "$HOME/git/fchat-rising/electron/dist/F-Chat-linux-x64/AppRun")
   , ("M1-c t",          addName "Launch Telegram"       $ spawn "telegram-desktop")
   
   {- Music -}
