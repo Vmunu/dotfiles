@@ -96,7 +96,7 @@ import XMonad.Util.SpawnOnce
 import Colors.DoomOne
 
 myFont :: String
-myFont = "xft:Mononoki:regular:size=12:antialias=true:hinting=true"
+myFont = "xft:Mononoki Nerd Font:regular:size=12:antialias=true:hinting=true"
 
 myModMask :: KeyMask
 myModMask = mod4Mask			-- Sets modkey to super/windows key
@@ -428,21 +428,21 @@ myKeys c =
   , ("M-,",	addName "Move to prev WS"               $ moveTo Prev nonNSP)]
 
   ^++^ subKeys "Window navigation"
-  [ ("M-j",		addName "Move focus to prev window"                $ windows W.focusUp)
-  , ("M-k",		addName "Move focus to next window"                $ windows W.focusDown)
-  , ("M-m",		addName "Move focus to master window"              $ windows W.focusMaster)
-  , ("M-S-j",		addName "Swap focused window with prev window"   $ windows W.swapUp)
-  , ("M-S-k",		addName "Swap focused window with next window"   $ windows W.swapDown)
-  , ("M-S-m",		addName "Swap focused window with master window" $ windows W.swapMaster)
-  , ("M-<Return>",	addName "Move focused window to master"  $ promote)]
+  [ ("M-j",             addName "Move focus to prev window"                $ windows W.focusUp)
+  , ("M-k",             addName "Move focus to next window"                $ windows W.focusDown)
+  , ("M-m",             addName "Move focus to master window"              $ windows W.focusMaster)
+  , ("M-S-j",           addName "Swap focused window with prev window"   $ windows W.swapUp)
+  , ("M-S-k",           addName "Swap focused window with next window"   $ windows W.swapDown)
+  , ("M-S-m",           addName "Swap focused window with master window" $ windows W.swapMaster)
+  , ("M-<Return>",      addName "Move focused window to master"  $ promote)]
 
   ^++^ subKeys "Programs"
   {- Utilities -}
-  [("M1-<Return>",	addName "Launch terminal"	$ spawn (myTerminal))
-  , ("M1-h",		addName "Launch File Manager"	$ spawn (myFileManager))	
-  , ("M1-p",		addName "Launch Pavucontrol"	$ spawn "pavucontrol")
-  , ("M-M1-h",		addName "Launch htop"		$ spawn (myTerminal ++ " -e htop"))
-  , ("M-v",		addName "Launch Clipmenu"	$ spawn "CM_LAUNCHER=rofi clipmenu -p 'clipboard'")
+  [("M1-<Return>",      addName "Launch terminal"	$ spawn (myTerminal))
+  , ("M1-h",            addName "Launch File Manager"	$ spawn (myFileManager))	
+  , ("M1-p",            addName "Launch Pavucontrol"	$ spawn "pavucontrol")
+  , ("M-M1-h",          addName "Launch htop"		$ spawn (myTerminal ++ " -e htop"))
+  , ("M-v",             addName "Launch Clipmenu"	$ spawn "CM_LAUNCHER=rofi clipmenu -p 'clipboard'")
   , ("M-o",             addName "Launch Obsidian"       $ spawn "obsidian")
 
   , ("M-r l",           addName "Redshift Low"          $ spawn "redshift -PO 4000")
@@ -454,9 +454,9 @@ myKeys c =
   , ("M1-b",		addName "Launch web browser"	$ spawn (myBrowser))
 
   {- Chat Programs -}
-  , ("M1-c d",		addName "Launch Discord"	$ spawn "discord")
-  --, ("M1-c f",		addName "Launch F-Chat"		$ spawn "$HOME/.local/bin/appimages/FChat.AppImage")
-  , ("M1-c f",		addName "Launch F-Chat"		$ spawn "$HOME/git/fchat-rising/electron/dist/F-Chat-linux-x64/AppRun")
+  , ("M1-c d",          addName "Launch Discord"        $ spawn "discord")
+  --, ("M1-c f",          addName "Launch F-Chat"         $ spawn "$HOME/.local/bin/appimages/FChat.AppImage")
+  , ("M1-c f",          addName "Launch F-Chat"         $ spawn "$HOME/git/fchat-rising/electron/dist/F-Chat-linux-x64/AppRun")
   , ("M1-c t",          addName "Launch Telegram"       $ spawn "telegram-desktop")
   
   {- Music -}
@@ -466,8 +466,8 @@ myKeys c =
 
   {- Games -}
   , ("M1-g s",          addName "Launch Steam"          $ spawn "steam")
-  , ("M1-g m",          addName "Launch Minecraft"        $ spawn (myMinecraft))
-  , ("M1-g b",		addName "Launch Badlion"	$ spawn "/opt/BadlionClient/BadlionClient")
+  , ("M1-g m",          addName "Launch Minecraft"      $ spawn (myMinecraft))
+  , ("M1-g b",          addName "Launch Badlion"        $ spawn "/opt/BadlionClient/BadlionClient")
   , ("M1-g r",          addName "Launch RuneLite"       $ spawn "./.local/bin/appimages/RuneLite.AppImage")
 
   {- Coding -}
@@ -476,10 +476,11 @@ myKeys c =
   , ("M1-c s",          addName "Launch Spyder"         $ spawn "spyder")
 
   {- Writing -}
-  , ("M1-w e",		addName "Launch Emacs"		$ spawn "emacs")
+  , ("M1-o",            addName "Launch Obsidian"       $ spawn "obsidian")
+  , ("M1-w e",          addName "Launch Emacs"          $ spawn "emacs")
   , ("M1-w o",          addName "Launch Writer"         $ spawn "lowriter")
-  , ("M1-w v",		addName "Launch neovim"	$ spawn (myTerminal ++ " -e nvim"))
-  , ("M1-w l",		addName "Launch Leafpad"	$ spawn "leafpad")
+  , ("M1-w v",          addName "Launch neovim"         $ spawn (myTerminal ++ " -e nvim"))
+  , ("M1-w l",          addName "Launch Leafpad"        $ spawn "leafpad")
 
   {- Virtualization -}
   , ("M1-v v",          addName "Launch virt-manager"   $ spawn "virt-manager")]

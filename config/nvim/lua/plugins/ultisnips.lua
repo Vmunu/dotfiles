@@ -1,7 +1,8 @@
 return {
-  "sirver/ultisnips",
-  UltiSnipsExpandTrigger = "<tab>",
-  UltiSnipsJumpForwardTrigger = "<tab>",
-  UltiSnipsJumpBackwardTrigger = "<s-tab>",
-  UltiSnipsEditSplit = "vertical",
+  "SirVer/ultisnips",
+  lazy = false,
+  init = function()
+    vim.g.UltiSnipsExpandOrJumpTrigger = '<tab>'
+    vim.g.UltiSnipsJumpBackwardTrigger = '<s-tab>'
+  end
 }

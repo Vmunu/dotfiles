@@ -1,38 +1,67 @@
 \documentclass[11pt, a4paper]{article} % 10pt, 11pt or 12pt
-\input{../preamble.tex}
+\input{preamble.tex}
 
 %----------------------------------------------------------------------------------------
 % TITLE SECTION
-\title{\textsc{Homework Number}\\ % Homework Number
-\Large{Course Title} % Course Title
-}
-\author{Name\\ % Name
-  \textit{Institution}\\ % Institution
-}
-\date{Due Date} % Due Date
 %----------------------------------------------------------------------------------------
-% DARK MODE
-%\pagecolor{darkgray}
-%\color{white}
+\title{Assignment 1}
+\date{\today}
+\makeatletter
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+    \vskip 1em%
+    %{\large \@date}%
+  \end{center}%
+  \par
+  \vskip 1em}
+\makeatother
 %----------------------------------------------------------------------------------------
 % HEADERS & FOOTERS
-\fancyhead[R]{Name}
-\fancyhead[C]{Course Title}
-\fancyhead[L]{Problem \thechapter}
-\fancyfoot[R]{\thepage} 
+\fancypagestyle{plain}{%  the preset of fancyhdr 
+    \fancyhf{} % clear all header and footer fields
+    \fancyfoot[L]{December 2024}
+    \fancyfoot[R]{Page \thepage}
+    \fancyhead[R]{\includegraphics[scale=0.5]{bing-u.pdf}}
+    \fancyhead[C]{Course Number \& Title}
+    \fancyhead[L]{Vincent Santini}
+}
+\fancyfoot[L]{December 2024}
 \fancyfoot[C]{}
-\fancyfoot[L]{Semester}
+\fancyfoot[R]{Page \thepage}
+\fancyhead[R]{\includegraphics[scale=0.5]{bing-u.pdf}}
+\fancyhead[C]{\thetitle}
+\fancyhead[L]{Course Number \& Title}
 %----------------------------------------------------------------------------------------
 % REMOVE SECTION NUMBERING
 \setcounter{secnumdepth}{0}
 %----------------------------------------------------------------------------------------
 % BEGINNING OF DOCUMENT
 \begin{document}
-\pagenumbering{roman}
-\maketitle
 \pagenumbering{arabic}
 
-\section{Problem}
+\maketitle
+\noindent\textit{With problems from "Textbook" (Author).}
+
+\textbf{Problem 1}
+
+\newpage
+\textbf{Problem 2}
+
+
+
+
+
+
+
+
+
+
+
 
 %----------------------------------------------------------------------------------------
 \end{document}

@@ -1,22 +1,21 @@
-% This preamble was written by Gilles Castel (✝2022) and modified by Vox.
-
-% Base packages
+% Some basic packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=1.0in]{geometry}
 \usepackage{textcomp}
 \usepackage{babel}
+\usepackage{graphicx}
+\usepackage{tikz}
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{enumitem}
-\usepackage{hyperref}
-
-% Fix some stuff
-% http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
-\pdfsuppresswarningpagegroup=1
 \pdfminorversion=7
+
+% Extra packages
+\usepackage{hyperref}
+\usepackage{titling}
 
 % Don't indent paragraphs, leave some space between them
 \usepackage{parskip}
@@ -27,29 +26,51 @@
 \usepackage{multicol}
 \usepackage{xcolor}
 
-% Math packages
-\usepackage{amsmath, amsfonts, mathtools, amsthm, amssymb}
-\usepackage{mathrsfs} % Fancy script
-\usepackage{bm} % Bold math
+% ALTERNATE FONT 
+%\usepackage{cmbright}
+
+% MATH STUFF
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
 \usepackage{cancel}
-\usepackage{mathrsfs} % Fancy script
+\usepackage{bbold}
+\usepackage{bm}       % Bold math
 \usepackage{braket}
 
-% Some shortcuts
+% FANCY HEADERS 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% LE: left even
+% RO: right odd
+% CE, CO: center even, center odd
+% My name for when I print my lecture notes to use for an open book exam.
+% \fancyhead[LE,RO]{Gilles Castel}
+
+% HYPERREFS 
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Research Topic},
+    }
+
+% SHORTCUTS 
+\def\bs#1{\boldsymbol{#1}}
+\def\E#1{\times10^{#1}}
+\newcommand{\infint}{\int_{\infty}^{\infty}}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
 \newcommand\N{\ensuremath{\mathbb{N}}}
 \newcommand\R{\ensuremath{\mathbb{R}}}
 \newcommand\Z{\ensuremath{\mathbb{Z}}}
 \renewcommand\O{\ensuremath{\emptyset}}
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
-\def\bd#1{\textbf{#1}}
-\def\bs#1{\boldsymbol{#1}}
-\def\it#1{\textit{#1}}
-\def\E#1{\times10^{#1}}
-\def\exp#1{e^{#1}}
-
-% Easily typeset systems of equations (French package)
-\usepackage{systeme}
 
 % Put x \to \infty below \lim
 \let\svlim\lim\def\lim{\svlim\limits}
@@ -58,11 +79,13 @@
 \let\implies\Rightarrow
 \let\impliedby\Leftarrow
 \let\iff\Leftrightarrow
-\let\epsilon\varepsilon
+%\let\epsilon\varepsilon
+%\let\phi\varphi
 
 % Add \contra symbol to denote contradiction
 \usepackage{stmaryrd} % for \lightning
 \newcommand\contra{\scalebox{1.5}{$\lightning$}}
+
 
 % Command for short corrections
 % Usage: 1+1=\correct{3}{2}
@@ -79,36 +102,16 @@
 % hide parts
 \newcommand\hide[1]{}
 
+% si unitx
+\usepackage{siunitx}
+\sisetup{locale = FR}
+
 % Environments
 \makeatother
 % For box around Definition, Theorem, \ldots
 \usepackage{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=0em}
 \theoremstyle{definition}
-\newmdtheoremenv[nobreak=true]{definitie}{Definitie}
-\newmdtheoremenv[nobreak=true]{eigenschap}{Eigenschap}
-\newmdtheoremenv[nobreak=true]{gevolg}{Gevolg}
-\newmdtheoremenv[nobreak=true]{lemma}{Lemma}
-\newmdtheoremenv[nobreak=true]{propositie}{Propositie}
-\newmdtheoremenv[nobreak=true]{stelling}{Stelling}
-\newmdtheoremenv[nobreak=true]{wet}{Wet}
-\newmdtheoremenv[nobreak=true]{postulaat}{Postulaat}
-\newmdtheoremenv{conclusie}{Conclusie}
-\newmdtheoremenv{toemaatje}{Toemaatje}
-\newmdtheoremenv{vermoeden}{Vermoeden}
-\newtheorem*{herhaling}{Herhaling}
-\newtheorem*{intermezzo}{Intermezzo}
-\newtheorem*{notatie}{Notatie}
-\newtheorem*{observatie}{Observatie}
-\newtheorem*{oef}{Oefening}
-\newtheorem*{opmerking}{Opmerking}
-\newtheorem*{praktisch}{Praktisch}
-\newtheorem*{probleem}{Probleem}
-\newtheorem*{terminologie}{Terminologie}
-\newtheorem*{toepassing}{Toepassing}
-\newtheorem*{uovt}{UOVT}
-\newtheorem*{vb}{Voorbeeld}
-\newtheorem*{vraag}{Vraag}
 
 \newmdtheoremenv[nobreak=true]{definition}{Definition}
 \newtheorem*{eg}{Example}
@@ -189,12 +192,6 @@
     \marginpar{\small\textsf{\mbox{#2}}}
 }
 
-% FANCY HEADERS
-% LE:       left even
-% RO:       right odd
-% CE,CO:   center even, center odd
-\usepackage{fancyhdr}
-\pagestyle{fancy}
 
 \makeatother
 
@@ -242,11 +239,7 @@
     \import{./figures/}{#1.pdf_tex}
 }
 
-% Hyperref setup
-\hypersetup{
-    colorlinks=true,
-    linkcolor=cyan,
-    filecolor=magenta,
-    urlcolor=cyan,
-    pdftitle={Research Topic},
-    }
+% Fix some stuff
+% %http://tex.stackexchange.com/questions/76273/multiple-pdfs-with-page-group-included-in-a-single-page-warning
+\pdfsuppresswarningpagegroup=1
+
