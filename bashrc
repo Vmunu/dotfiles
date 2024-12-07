@@ -64,7 +64,7 @@ export EDITOR=nvim
 export LFS=/mnt/scratch
 export LFS_TGT=x86_64-lfs-linux-gnu
 export JAVA_HOME=/opt/jdk-18.0.1.1/
-export PAT=~/documents/keys/PAT
+export PAT=~/documents/pat
 export QT_QPA_PLATFORMTHEME=qt5ct
 export JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab
 
