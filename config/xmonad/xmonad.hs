@@ -302,7 +302,7 @@ myTabTheme = def { fontName            = myFont
 -- Theme for showWName which prints current workspace when you change workspaces.
 myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
-  { swn_font              = "xft:Mononoki:bold:size=60"
+  { swn_font              = "xft:Mononoki Nerd Font:bold:size=60"
   , swn_fade              = 1.0
   , swn_bgcolor           = "#1c1f24"
   , swn_color             = "#ffffff"
@@ -326,9 +326,9 @@ myLayoutHook = avoidStruts
                                         ||| tallAccordion
                                         ||| wideAccordion
 
---myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
+myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 ", " 10 "]
 --myWorkspaces    = ["\61612","\61899","\61947","\61635","\61502","\61501","\61705","\61564","\62150","\61872"]
-myWorkspaces = ["work 1", "work 2", "work 3", "www" , "school 1", "school 2", "chat 1", "chat 2", "dev"]
+--myWorkspaces = ["work 1", "work 2", "work 3", "www" , "school 1", "school 2", "chat 1", "chat 2", "dev"]
 myWorkspaceIndices = M.fromList $ zipWith (,) myWorkspaces [1..] -- (,) == \x y -> (x,y)
 
 clickable ws = "<action=xdotool key super+"++show i++">"++ws++"</action>"
@@ -542,7 +542,8 @@ main = do
     , modMask            = myModMask
     , terminal           = myTerminal
     , startupHook        = myStartupHook
-    , layoutHook         = showWName' myShowWNameTheme $ myLayoutHook
+    --, layoutHook         = showWName' myShowWNameTheme $ myLayoutHook
+    , layoutHook         = myLayoutHook
     , workspaces         = myWorkspaces
     , borderWidth        = myBorderWidth
     , normalBorderColor  = myNormColor
