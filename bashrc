@@ -100,6 +100,7 @@ alias bid="$SUPERUSER blkid"
 alias nfet="neofetch"
 alias ptex="pdflatex"
 alias iso="tree /media/hdd/ISOs/"
+alias init-rebuild="$SUPERUSER mkinitcpio -p linux && $SUPERUSER grub-mkconfig -o /boot/grub/grub.cfg"
 
 ## Jupyter ##
 alias jup="cd $HOME/jupyter && jupyter lab"
@@ -140,6 +141,24 @@ alias cp="cp -iv"
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+
+## User Configs ##
+alias snips="$EDITOR ~/.config/nvim/UltiSnips/all.snippets"
+alias brc="$EDITOR ~/.bashrc"
+alias xrc="$EDITOR ~/.xinitrc"
+alias xmc="$EDITOR ~/.config/xmonad/xmonad.hs"
+alias xbc="$EDITOR ~/.config/xmobar/xmobarrc.hs"
+#alias dwme="$SUPERUSER $EDITOR /etc/portage/savedconfig/x11-wm/dwm-6.2.h"
+#alias dwmb="$SUPERUSER emerge dwm"
+#alias hlc="$EDITOR ~/.config/herbstluftwm/autostart"
+#alias bsc="$EDITOR ~/.config/bspwm/bspwmrc"
+#alias sxc="$EDITOR ~/.config/sxhkd/sxhkdrc"
+alias pbc="$EDITOR ~/.config/polybar/config"
+#alias pbl="$EDITOR ~/.config/polybar/launch.sh"
+alias alac="$EDITOR ~/.config/alacritty/alacritty.yml"
+
+## Rick Roll ##
+alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 ## Pacman ##
 alias pmi="sudo pacman -S"
@@ -196,24 +215,6 @@ alias pU="paru -Syuu"
 #alias apr="$SUPERUSER apt remove"
 #alias apar="$SUPERUSER apt autoremove"
 #alias apU="$SUPERUSER apt update && $SUPERUSER apt upgrade"
-
-## User Configs ##
-alias snips="$EDITOR ~/.config/nvim/UltiSnips/all.snippets"
-alias brc="$EDITOR ~/.bashrc"
-alias xrc="$EDITOR ~/.xinitrc"
-alias xmc="$EDITOR ~/.config/xmonad/xmonad.hs"
-alias xbc="$EDITOR ~/.config/xmobar/xmobarrc.hs"
-#alias dwme="$SUPERUSER $EDITOR /etc/portage/savedconfig/x11-wm/dwm-6.2.h"
-#alias dwmb="$SUPERUSER emerge dwm"
-#alias hlc="$EDITOR ~/.config/herbstluftwm/autostart"
-#alias bsc="$EDITOR ~/.config/bspwm/bspwmrc"
-#alias sxc="$EDITOR ~/.config/sxhkd/sxhkdrc"
-#alias pbc="$EDITOR ~/.config/polybar/config"
-#alias pbl="$EDITOR ~/.config/polybar/launch.sh"
-alias alac="$EDITOR ~/.config/alacritty/alacritty.yml"
-
-## Rick Roll ##
-alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
 ## Power Shortcuts ##
 alias log="kill -9 -1"

@@ -466,7 +466,7 @@ myKeys c =
 
   {- Games -}
   , ("M1-g s",          addName "Launch Steam"          $ spawn "steam")
-  , ("M1-g m",          addName "Launch Minecraft"      $ spawn (myMinecraft))
+  , ("M1-g m",          addName "Launch Minecraft"      $ spawn ("prime-run" ++ myMinecraft))
   , ("M1-g b",          addName "Launch Badlion"        $ spawn "/opt/BadlionClient/BadlionClient")
   , ("M1-g r",          addName "Launch RuneLite"       $ spawn "./.local/bin/appimages/RuneLite.AppImage")
 
