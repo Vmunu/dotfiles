@@ -109,6 +109,9 @@ alias jup="cd $HOME/jupyter && jupyter lab"
 alias dots="./.scripts/dots.sh"
 alias pat="cat $PAT ; echo"
 
+## Vencord ##
+alias vencord="sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)""
+
 ## List ##
 alias ls='eza -ahl --color=always --group-directories-first' # All files and dirs
 alias la='eza -ahl --color=always --group-directories-first' # All files and dirs
@@ -127,7 +130,7 @@ alias ytv="youtube-dl -f bestvideo+bestaudio"
 ## Vim and Emacs ##
 alias v="vim"
 alias nv="nvim"
-alias sv="$SUPEUSER vim"
+alias sv="$SUPERUSER vim"
 alias snv="$SUPERUSER nvim"
 alias em="emacs"
 alias sem="$SUPERUSER emacs"

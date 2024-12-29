@@ -366,6 +366,7 @@ myManageHook = composeAll
   , className =? "vlc"                  --> doCenterFloat
   , className =? "Deadbeef"             --> doCenterFloat
   , className =? "Eog"                  --> doCenterFloat
+  , title =? "Open Files"               --> doCenterFloat
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat
   , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
   , isFullscreen -->  doFullFloat
@@ -466,7 +467,7 @@ myKeys c =
 
   {- Games -}
   , ("M1-g s",          addName "Launch Steam"          $ spawn "steam")
-  , ("M1-g m",          addName "Launch Minecraft"      $ spawn ("prime-run" ++ myMinecraft))
+  , ("M1-g m",          addName "Launch Minecraft"      $ spawn ("prime-run " ++ myMinecraft))
   , ("M1-g b",          addName "Launch Badlion"        $ spawn "/opt/BadlionClient/BadlionClient")
   , ("M1-g r",          addName "Launch RuneLite"       $ spawn "./.local/bin/appimages/RuneLite.AppImage")
 
@@ -501,10 +502,10 @@ myKeys c =
   , ("M-S-t",	addName "Sink all floated windows" $ sinkAll)]
 
   ^++^ subKeys "Window spacing (gaps)"
-  [ ("C-M1-j", addName "Decrease window spacing" $ decWindowSpacing 4)
-  , ("C-M1-k", addName "Increase window spacing" $ incWindowSpacing 4)
-  , ("C-M1-h", addName "Decrease screen spacing" $ decScreenSpacing 4)
-  , ("C-M1-l", addName "Increase screen spacing" $ incScreenSpacing 4)]
+  [ ("C-M-j", addName "Decrease window spacing" $ decWindowSpacing 4)
+  , ("C-M-k", addName "Increase window spacing" $ incWindowSpacing 4)
+  , ("C-M-h", addName "Decrease screen spacing" $ decScreenSpacing 4)
+  , ("C-M-l", addName "Increase screen spacing" $ incScreenSpacing 4)]
 
   ^++^ subKeys "Increase/decrease windows in master pane or the stack"
   [ ("M-S-<Up>", addName "Increase clients in master pane"   $ sendMessage (IncMasterN 1))
