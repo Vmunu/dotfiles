@@ -366,6 +366,8 @@ myManageHook = composeAll
   , className =? "vlc"                  --> doCenterFloat
   , className =? "Deadbeef"             --> doCenterFloat
   , className =? "Eog"                  --> doCenterFloat
+  , className =? "Nitrogen"             --> doCenterFloat
+  , title =? "gcolor2"                  --> doCenterFloat
   , title =? "Open Files"               --> doCenterFloat
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat
   , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog

@@ -52,7 +52,7 @@ ex() {
 
 ### STARTUP ###
 #neofetch
-#pfetch
+pfetch
 eza -lh --color=always --group-directories-first
 
 ## Prompt ##
@@ -124,8 +124,8 @@ alias yta-aac="youtube-dl --extract-audio --audio-format aac"
 alias yta-best="youtube-dl --extract-audio --audio-format best"
 alias yta-flac="youtube-dl --extract-audio --audio-format flac"
 alias yta-m4a="youtube-dl --extract-audio --audio-format m4a"
-alias yta-mp3="youtube-dl --extract-audio --audio-format mp3"
-alias ytv="youtube-dl -f bestvideo+bestaudio"
+alias yta-mp3="yt-dlp --extract-audio --audio-format mp3"
+alias ytv="yt-dlp -f bestvideo+bestaudio"
 
 ## Vim and Emacs ##
 alias v="vim"
