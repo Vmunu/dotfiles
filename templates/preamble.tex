@@ -8,6 +8,7 @@
 \usepackage{tikz}
 \usepackage{tikz-3dplot}
 \usetikzlibrary{patterns}
+\usepackage{circuitikz}
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{float}
@@ -41,6 +42,7 @@
 \usepackage{bbold}
 \usepackage{bm}       % Bold math
 \usepackage{braket}
+\usepackage{esint}
 
 % FANCY HEADERS 
 \usepackage{fancyhdr}
@@ -66,8 +68,16 @@
 \def\E#1{\times10^{#1}}
 \def\det#1{\text{det}#1}
 \def\tr#1{\text{tr}#1}
-\newcommand{\infint}{\int_{\infty}^{\infty}}
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+\newcommand{\infint}{\int_{\infty}^{\infty}}
+
+\newcommand{\xhat}{\bs{\hat{x}}}
+\newcommand{\yhat}{\bs{\hat{y}}}
+\newcommand{\zhat}{\bs{\hat{z}}}
+\newcommand{\rhat}{\bs{\hat{r}}}
+\newcommand{\shat}{\bs{\hat{s}}}
+\newcommand{\thetahat}{\bs{\hat{\theta}}}
+\newcommand{\phihat}{\bs{\hat{\varphi}}}
 
 \newcommand\N{\ensuremath{\mathbb{N}}}
 \newcommand\R{\ensuremath{\mathbb{R}}}

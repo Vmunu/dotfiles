@@ -105,7 +105,7 @@ myTerminal :: String
 myTerminal = "kitty"		-- Sets default terminal
 
 myBrowser :: String
-myBrowser = "chromium"			-- Sets default browser
+myBrowser = "zen-browser"			-- Sets default browser
 
 myMinecraft :: String
 myMinecraft = "prismlauncher"		-- Sets default Minecraft launcher
